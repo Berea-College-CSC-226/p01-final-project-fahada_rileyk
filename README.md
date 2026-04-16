@@ -5,19 +5,20 @@
 ❗️Exclamation Marks ❗️indicate action items; you should remove these emoji as you complete/update the items which 
   they accompany. (This means that your final README should have no ❗️in it!)
 
-❗️**Author(s)**: Your name(s) here
+**Author(s)**: A M Fahad, Boone Riley
 
-❗️**Google Doc Link**: Your link here
+**Google Doc Link**: https://docs.google.com/document/d/1N20xMdcSbjpd84dWcVu8vcQWkl0jQD0CLZO8tORZdHM/edit?usp=sharing
 
 ---
 
 ## Milestone 1: Setup, Planning, Design
 
-❗️**Title**: `What is the title of your project? Be creative! Replace this block of text.`
+**Title**: Berea Quad Store Product Inventory 
 
-❗**Purpose**: `In a single sentence, describe WHAT your project will do. Replace this block of text.`
+**Purpose**: What if we had a Walmart-like store in the middle of the Quad? What if the store told the students
+to build them a somewhat functional backend software that is able to keep track of their inventory.
 
-❗️**Source Assignment(s)**: `List which original assignments you will base your project on? Replace this block of text.`
+**Source Assignment(s)**: UPC Barcode assignment 
 
 ❗️**CRC Card(s)**:
   - Create a CRC card for each class that your project will implement.
@@ -26,18 +27,22 @@
   - Tables in markdown are not easy, so we suggest saving your CRC card as an image and including the image(s) in the 
     README. You can do this by saving an image in the repository and linking to it. See the sample CRC card below - 
     and REPLACE it with your own:
-  
-![Don't leave me in your README!](image/crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
 
-❗️**Branches**: This project will **require** effective use of git. 
+
+![Don't leave me in your README!](image/CRC 1.png)
+![Don't leave me in your README!](image/CRC 2.png)
+![Don't leave me in your README!](image/CRC 3.png)
+![Don't leave me in your README!](image/CRC 4.png)
+![Don't leave me in your README!](image/CRC 5.png)
+**Branches**: This project will **require** effective use of git. 
 
 ❗Each partner should create a branch at the beginning of the project, and stay on this branch (or branches of their 
 branch) as they work. When you need to bring each others branches together, do so by merging each other's branches 
 into your own, following the process we've discussed in previous assignments, then re-branching out from the merged code.  
 
 ```
-    Branch 1 starting name: _____________
-    Branch 2 starting name: _____________
+    Branch 1 starting name: fahada1
+    Branch 2 starting name: rileyk
 ```
 
 ### References 
@@ -47,7 +52,8 @@ and describe how you integrated the ideas or code into your program. This includ
 helped you, AI tools you've used, and any other resources that are not solely your own contribution. Update this 
 section as you go. DO NOT forget about it!
 
----
+Stack overflow to dig into difference between instances and objects, Stack overflow to dig into connecting
+SQL with python
 
 ## Milestone 2: Code Setup and Issue Queue
 
