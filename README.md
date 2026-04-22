@@ -20,7 +20,7 @@ to build them a somewhat functional backend software that is able to keep track 
 
 **Source Assignment(s)**: UPC Barcode assignment 
 
-❗️**CRC Card(s)**:
+️**CRC Card(s)**:
   - Create a CRC card for each class that your project will implement.
   - See this link for a sample CRC card and a template to use for your own cards (you will have to make a copy to edit):
     [CRC Card Example](https://docs.google.com/document/d/1JE_3Qmytk_JGztRqkPXWACJwciPH61VCx3idIlBCVFY/edit?usp=sharing)
@@ -36,7 +36,7 @@ to build them a somewhat functional backend software that is able to keep track 
 ![Don't leave me in your README!](image/CRC 5.png)
 **Branches**: This project will **require** effective use of git. 
 
-❗Each partner should create a branch at the beginning of the project, and stay on this branch (or branches of their 
+Each partner should create a branch at the beginning of the project, and stay on this branch (or branches of their 
 branch) as they work. When you need to bring each others branches together, do so by merging each other's branches 
 into your own, following the process we've discussed in previous assignments, then re-branching out from the merged code.  
 
@@ -59,11 +59,16 @@ SQL with python
 
 ❗Most importantly, keep your issue queue up to date, and focus on your code. 🙃
 
-❗Reflect on what you’ve done so far. How’s it going? Are you feeling behind/ahead? What are you worried about? 
+Reflect on what you’ve done so far. How’s it going? Are you feeling behind/ahead? What are you worried about? 
 What has surprised you so far? Describe your general feelings. Be honest with yourself; this section is for you, not me.
 
 ```
-    **Replace this text with your reflection
+    Right now I don't feel the best because me and my partner haven't had much time to
+    work due to scheduling conflicts but I am confident that we will get it done on time.
+    We have been working mostly in long sessions at night in order to make up for it which
+    is working but can be tiresome working so late. I think we are doing good, and communication
+    will probably be the most important thing for us to get everything done on time.
+    
 ```
 
 ---
