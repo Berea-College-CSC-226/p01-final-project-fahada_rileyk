@@ -106,3 +106,56 @@ def update_quantity(self, upc: str, new_quantity: int) -> bool:
 
     # Check if any row was actually updated
     return cursor.rowcount > 0
+
+def log_transaction(self, upc: str, change: int):
+    """
+    Log an inventory change to the transactions table.
+
+    Args:
+            upc (str): UPC code of product
+            change (int): Quantity change (positive for stock in, negative for stock out)
+    """
+    cursor = self.connection.cursor()
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    cursor.execute(
+        "INSERT INTO transactions (upc, change, timestamp) VALUES (?, ?, ?)",
+        (upc, change, timestamp)
+    )
+    self.connection.commit()
+
+def get_all_products(self) -> List[Tuple[str, str, int]]:
+    """
+    Retrieve all products from database.
+
+     Returns:
+        list: List of tuples (upc, name, quantity)
+    """
+    cursor = self.connection.cursor()
+    cursor.execute("SELECT upc, name, quantity FROM products")
+    return cursor.fetchall()
+
+def get_transactions_for_product(self, upc: str) -> List[Tuple[int, str, int, str]]:
+    """
+    Get all transactions for a specific product.
+
+    Args:
+    upc (str): UPC code of product
+
+    Returns:
+    list: List of tuples (id, upc, change, timestamp)
+    """
+    cursor = self.connection.cursor()
+    cursor.execute(
+        "SELECT id, upc, change, timestamp FROM transactions WHERE upc = ? ORDER BY timestamp DESC",
+        (upc,)
+    )
+    return cursor.fetchall()
+
+def close(self):
+    """Close the database connection."""
+    if self.connection:
+        self.connection.close()
+
+
+
