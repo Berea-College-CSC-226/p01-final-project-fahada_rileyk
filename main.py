@@ -1,8 +1,6 @@
 """
 Main Entry Point
 Berea Quad Walmart - Inventory Management System
-
-Run this file to start the application.
 """
 
 from gui import main

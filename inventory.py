@@ -21,3 +21,7 @@ class InventoryManager:
             return False, "Invalid UPC code. Check the format and checksum."
         if quantity < 0:
             return False, "Quantity cannot be negative."
+
+    def close(self):
+        """Close database connection."""
+        self.database.close()
