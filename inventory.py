@@ -1,4 +1,5 @@
 from original_code.upc import UPC
+from database import Database
 
 class InventoryManager:
 
