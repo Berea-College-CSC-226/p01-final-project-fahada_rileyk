@@ -47,6 +47,39 @@ class InventoryManager:
         else:
             return False, "Product not found.", None
 
+    def stock_in(self, upc: str, quantity: int) -> Tuple[bool, str]:
+        """
+        Increase inventory (receive stock).
+
+        Args:
+            upc (str): UPC barcode
+            quantity (int): Amount to add
+
+        Returns:
+            tuple: (success: bool, message: str)
+        """
+        # Validate UPC
+        if not self.upc_validator.is_valid(upc):
+            return False, "Invalid UPC code."
+
+        # Validate quantity is positive
+        if quantity <= 0:
+            return False, "Stock in quantity must be positive."
+
+        # Check if product exists
+        product = self.database.get_product(upc)
+        if not product:
+            return False, "Product not found. Add it first."
+
+        # Update inventory
+        upc_code, name, current_quantity = product
+        new_quantity = current_quantity + quantity
+
+        self.database.update_quantity(upc, new_quantity)
+        self.database.log_transaction(upc, quantity)
+
+        return True, f"Stocked in {quantity} units. New quantity: {new_quantity}"
+
     def close(self):
         """Close database connection."""
         self.database.close()
