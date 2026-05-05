@@ -22,6 +22,17 @@ class InventoryManager:
             return False, "Invalid UPC code. Check the format and checksum."
         if quantity < 0:
             return False, "Quantity cannot be negative."
+        # Validate name is not empty
+        if not name or name.strip() == "":
+            return False, "Product name cannot be empty."
+
+        # Attempt to insert into database
+        success = self.database.insert_product(upc, name, quantity)
+
+        if success:
+            return True, f"Product '{name}' added successfully with {quantity} units."
+        else:
+            return False, "Product with this UPC already exists."
 
     def search_product(self, upc: str) -> Tuple[bool, str, Optional[Tuple]]:
         """

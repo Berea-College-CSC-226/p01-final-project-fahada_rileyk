@@ -195,7 +195,7 @@ class InventoryGUI:
         """
 
         try:
-            img = Image.open("image/berea_quad.jpg")
+            img = Image.open("image/finalprojectlogo.jpg")
             img = img.resize((400, 80), Image.Resampling.LANCZOS)
             photo = ImageTk.PhotoImage(img)
 
