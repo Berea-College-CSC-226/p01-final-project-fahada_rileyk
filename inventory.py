@@ -80,6 +80,46 @@ class InventoryManager:
 
         return True, f"Stocked in {quantity} units. New quantity: {new_quantity}"
 
+    def stock_out(self, upc: str, quantity: int) -> Tuple[bool, str]:
+        """
+        Decrease inventory (sell/remove stock).
+
+        Prevents negative inventory.
+
+        Args:
+            upc (str): UPC barcode
+            quantity (int): Amount to remove
+
+        Returns:
+            tuple: (success: bool, message: str)
+        """
+        # Validate UPC
+        if not self.upc_validator.is_valid(upc):
+            return False, "Invalid UPC code."
+
+        # Validate quantity is positive
+        if quantity <= 0:
+            return False, "Stock out quantity must be positive."
+
+        # Check if product exists
+        product = self.database.get_product(upc)
+        if not product:
+            return False, "Product not found."
+
+        # Check if sufficient stock available
+        upc_code, name, current_quantity = product
+
+        if current_quantity < quantity:
+            return False, f"Insufficient stock. Available: {current_quantity}, Requested: {quantity}"
+
+        # Update inventory
+        new_quantity = current_quantity - quantity
+
+        self.database.update_quantity(upc, new_quantity)
+        self.database.log_transaction(upc, -quantity)  # Negative for stock out
+
+        return True, f"Stocked out {quantity} units. New quantity: {new_quantity}"
+
     def close(self):
         """Close database connection."""
         self.database.close()
