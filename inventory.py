@@ -120,6 +120,15 @@ class InventoryManager:
 
         return True, f"Stocked out {quantity} units. New quantity: {new_quantity}"
 
+    def get_all_products(self):
+        """
+        Get all products in inventory.
+
+        Returns:
+            list: All products as tuples (upc, name, quantity)
+        """
+        return self.database.get_all_products()
+
     def close(self):
         """Close database connection."""
         self.database.close()
