@@ -1,3 +1,18 @@
+######################################################################
+# Author: A M Fahad, Boone B. Riley
+# Username: fahada, rileyk
+#
+# Assignment: Final Project
+#
+# Purpose: Test Suite for the Final Project. Currently only contains UPC tests. Writing tests
+# was tedious and this is something we need to improve on in our next project, to have a better
+# suite, that would have saved a lot of time trying to debug our functions.
+######################################################################
+# Acknowledgements: StackOverflow, Youtube
+# licensed under a Creative Commons
+# Attribution-Noncommercial-Share Alike 3.0 United States License.
+####################################################################################
+
 import unittest
 from original_code.upc import UPC
 

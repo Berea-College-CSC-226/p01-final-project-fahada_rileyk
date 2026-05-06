@@ -1,3 +1,16 @@
+######################################################################
+# Author: A M Fahad, Boone B. Riley
+# Username: fahada, rileyk
+#
+# Assignment: Final Project
+#
+# Purpose: A single file that handles the database for the Berea Quad Walmart. We used
+# sqlite3 for it to handle the database side of the program.
+######################################################################
+# Acknowledgements: StackOverflow, Youtube
+# licensed under a Creative Commons
+# Attribution-Noncommercial-Share Alike 3.0 United States License.
+####################################################################################
 import sqlite3
 from typing import Optional, Tuple, List
 from datetime import datetime

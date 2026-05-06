@@ -1,13 +1,16 @@
-"""
-GUI Layer - Tkinter Interface
-Provides graphical user interface for Berea Quad Walmart inventory system.
-
-Features:
-- Product addition
-- Product search
-- Stock in/out operations
-- Display area for results
-"""
+######################################################################
+# Author: A M Fahad, Boone B. Riley
+# Username: fahada, rileyk
+#
+# Assignment: Final Project
+#
+# Purpose: Provides a graphical interface for the Berea Quad Walmart. Uses Tkinter
+#
+######################################################################
+# Acknowledgements: StackOverflow, Youtube
+# licensed under a Creative Commons
+# Attribution-Noncommercial-Share Alike 3.0 United States License.
+####################################################################################
 
 import tkinter as tk
 from tkinter import ttk, messagebox
