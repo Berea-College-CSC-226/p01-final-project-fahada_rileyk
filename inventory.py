@@ -10,7 +10,7 @@
 # Acknowledgements: StackOverflow, Youtube
 # licensed under a Creative Commons
 # Attribution-Noncommercial-Share Alike 3.0 United States License.
-####################################################################################
+#####################################################################################
 
 from original_code.upc import UPC
 from database import Database
